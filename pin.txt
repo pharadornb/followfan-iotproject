@@ -1,0 +1,23 @@
+# DigitalPin
+02 Relay electrical fan
+03 Trig ultrasonic
+04 Echo ultrasonic
+05 Motor L298N
+06 Motor L298N
+07 Motor L298N
+08 Motor L298N
+09 Motion PIR front
+10 Motion PIR back
+
+
+# FlowAlgorithm
+Motion check
+	true :
+		Ultrasonic check <= 20
+			Motor = backword
+		Ultrasonic check <= 50
+			Relay = true
+		Ultrasonic check <= 100
+			Motor = forward
+	false:
+		Relay = false
