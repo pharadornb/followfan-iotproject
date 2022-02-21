@@ -21,3 +21,50 @@ Motion check
 			Motor = forward
 	false:
 		Relay = false
+
+#define relayPin 2
+#define trigPin 3
+#define echoPin 4
+#define motorPin0 5
+#define motorPin1 6
+#define motorPin2 7
+#define motorPin3 8
+#define pirPin0 9
+#define pirPin1 10
+
+  pinMode(relayPin, OUTPUT);
+  digitalWrite(relayPin, HIGH);
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
+  pinMode(motorPin0, OUTPUT);
+  pinMode(motorPin1, OUTPUT);
+  pinMode(motorPin2, OUTPUT);
+  pinMode(motorPin3, OUTPUT);
+  pinMode(pirPin0, INPUT);
+  pinMode(pirPin1, INPUT);
+
+//  forwardMove();
+//  delay(10000);
+//  digitalWrite(relayPin, LOW);
+//  delay(5000);
+//  reverseMove();
+//  delay(10000);
+//  digitalWrite(relayPin, HIGH);
+//  delay(5000);
+
+
+if(front_motion) {
+	if(distance > 0 && distance <= 20) {
+		ถอยหลัง
+	} else if(distance > 20 && distance <= 50) {
+		เปิดพัดลม
+	} else if(distance > 50 && distance <= 100) {
+		เดินหน้า
+	} else {
+		ปิดพัดลม
+	}
+} else if(back_motion){
+  กลับหลัง
+} else {
+    ปิดพัดลม
+}
